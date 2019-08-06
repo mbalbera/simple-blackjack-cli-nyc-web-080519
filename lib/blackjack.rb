@@ -1,22 +1,13 @@
 def welcome
-  # code #welcome here
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
   rand(1..11)
 end
 
-def display_card_total(card_total)
-  puts "Your cards add up to #{card_total}"
-end
-
-
-##########
-# rounds #
-##########
-
-def welcome
-  puts "Welcome to the Blackjack Table"
+def display_card_total(c)
+  puts "Your cards add up to #{c}"
 end
 
 
@@ -26,9 +17,9 @@ end
 
 
 def initial_round
-  first_round = deal_card + deal_card
-  display_card_total(first_round)
-  return first_round
+  first = deal_card + deal_card
+  display_card_total(first)
+  return first
 end
 
 def get_user_input
@@ -73,10 +64,6 @@ end
 def invalid_command
   puts "Please enter a valid command"
 end
-
-##########
-# runner #
-##########
 
 def runner
   welcome
